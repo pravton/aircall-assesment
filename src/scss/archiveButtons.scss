@@ -1,0 +1,24 @@
+.archive-button {
+  &-container {
+    button {
+      width: 100%;
+      border: none;
+      padding: 15px;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      background-color: transparent;
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: left;
+      font-weight: 700;
+      color: #464646;
+      cursor: pointer;
+      &:hover {
+        background-color: #fff;
+        color: #2ac420;
+      }
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+}

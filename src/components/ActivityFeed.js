@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import { CallContext } from '../context/CallContext';
-import styles from './ActivityFeed.module.css';
+import '../scss/ActivityFeed.scss';
+
+import ArchiveButton from './ArchiveButton';
 
 function ActivityFeed() {
   const { calls, loading } = useContext(CallContext);
@@ -10,13 +12,19 @@ function ActivityFeed() {
   }
 
   return (
-    <div className={styles.feed}>
-      <div className=''>
-        <h2>Activity</h2>
+    <div className='activity-feed'>
+      <div className="activity-feed-header">
+        <div className='title-container'>
+          <h2><i className="fa-solid fa-phone"></i>Activity</h2>
+        </div>
+        <div className='buttons-container'>
+          <button className='button'>Inbox</button>
+          <button className='button'>All</button>
+          <button className='button'><i className="fa-solid fa-sliders"></i></button>
+        </div>
       </div>
-      <div className='buttons-container'>
-        <button className='button'>Inbox</button>
-        <button className='button'>All</button>
+      <div className='activity-feed-body'>
+        <ArchiveButton />
       </div>
     </div>
   );
