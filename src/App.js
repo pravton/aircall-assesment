@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { CallProvider } from './context/CallContext';
 import ActivityFeed from './components/ActivityFeed';
 import ActivityDetail from './components/ActivityDetail';
