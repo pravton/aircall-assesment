@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   module: {
@@ -36,6 +37,10 @@ module.exports = {
         ]
       }
     ]
+  },
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
   },
   devServer: {
     historyApiFallback: true,
