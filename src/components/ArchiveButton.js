@@ -1,12 +1,17 @@
 import React from 'react';
 import '../scss/ArchiveButtons.scss';
 
-function ArchiveButton() {
+function ArchiveButton({setArchiveAll, text}) {
+
+  function handleButtonClick() {
+    setArchiveAll(true);
+  }
+
   return (
     <div className='archive-button-container'>
-      <button className='archive-button'>
+      <button onClick={handleButtonClick} className='archive-button'>
         <i className="fa-solid fa-archive"></i>
-        Archive all calls
+        Archive {text} calls
       </button>
     </div>
   );
